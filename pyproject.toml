@@ -1,0 +1,17 @@
+[project]
+name = "midea_iot"
+version = "1.0-dev0"
+readme = "README.md"
+description = "Midea IoT protocols documentation and implementation."
+dependencies = [
+    "caterpillar-py",
+    "cryptography"
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["midea_iot*"]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
