@@ -64,6 +64,12 @@ BLE_KA_KEY = "midea_blekeyc"
 B2B_ENGINEERING_MODE_KEY = "69608"
 
 
+# Default success error code
+CODE_SUCCESS = 0
+
+# ---
+
+
 class Category(enum.IntEnum):
     AIR_CLEANER = 0xFC
     AIR_CONDITION = 0xAC

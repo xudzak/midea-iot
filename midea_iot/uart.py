@@ -2,7 +2,7 @@
 import enum
 import random
 
-from caterpillar.shortcuts import bitfield, LittleEndian, struct, this
+from caterpillar.shortcuts import opt, struct, this
 from caterpillar.model import unpack, pack
 from caterpillar.fields import uint8, uint16, uint32
 from caterpillar.py import EnumFactory, Bytes, Enum
@@ -37,7 +37,7 @@ UART_HEADER_MARK = b"\xaa"
 
 # Internal data transmit datagram called 'UartDatagram'. Only BASIC_INFO_QUERY is
 # used within the SDK.
-@struct
+@struct(options=[opt.S_ADD_BYTES])
 class UartDatagram:
     """Internal datagram format."""
 
